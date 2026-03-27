@@ -29,6 +29,6 @@ public class Ex03 {
         //show results
         System.out.println("Esse é o perímetro do retangulo: " + perimetro);
         System.out.println("Essa é a área do retângulo: " + area);
-        
+
     }
 }

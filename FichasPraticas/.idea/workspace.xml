@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca7359f-6377-4ea1-9e30-6f0300053555" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/FichaPratica1/Ex04.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FichaPratica1/Ex03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FichaPratica1/Ex03.java" afterDir="false" />
     </list>
@@ -39,6 +40,7 @@
   "keyToString": {
     "Application.Ex02.executor": "Run",
     "Application.Ex03.executor": "Run",
+    "Application.Ex04.executor": "Run",
     "Application.Exercicio01.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
