@@ -20,7 +20,7 @@ public class Ex01 {
         if (valor1 > valor2) {
             System.out.println("O maior valor é: " + valor1);
         } else {
-            System.out.println("O menor ou igual valor é: " + valor2);
+            System.out.println("O maior ou igual valor é: " + valor2);
         }
 
     }
