@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ca7359f-6377-4ea1-9e30-6f0300053555" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/FichaPratica2/Ex08.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FichaPratica2/Ex09.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FichaPratica2/Ex10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FichaPratica2/Ex11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FichaPratica2/Ex12.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FichaPratica2/Ex11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FichaPratica2/Ex11.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +48,7 @@
     "Application.Ex08.executor": "Run",
     "Application.Ex09.executor": "Run",
     "Application.Ex10.executor": "Run",
+    "Application.Ex11.executor": "Run",
     "Application.Exercicio01.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
