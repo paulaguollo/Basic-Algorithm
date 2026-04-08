@@ -8,7 +8,8 @@ public class Ex04 {
 
         System.out.println("__________ F03 | EX04 ___________");
         System.out.println("Enter a number and I will show you the sequence until it ");
-        int num;
+
+        int num; //give the name limit can be better to understand the last number
         int i=0;
 
         System.out.print("Enter number: ");
@@ -16,7 +17,7 @@ public class Ex04 {
 
         while (i <= num) {
                 System.out.print(i);
-                i++;
+                i++; // i = i + 1;
             }
         }
     }

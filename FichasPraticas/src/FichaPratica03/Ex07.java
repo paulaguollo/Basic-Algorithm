@@ -2,7 +2,7 @@ package FichaPratica03;
 
 public class Ex07 {
     public static void main(String[] args) {
-        System.out.println("__________ F03 | EX01 ___________");
+        System.out.println("__________ F03 | EX07 ___________");
         System.out.println("A program that shows numbers from 0 to 100 and its sum");
 
         int soma = 0;
