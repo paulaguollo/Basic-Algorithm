@@ -9,19 +9,19 @@ public class Ex09 {
         System.out.println("__________ F03 | EX09 ___________");
         System.out.println("Give me numbers, until you enter the number -1, I will say the average of the entered numbers (excluding -1).");
 
-int num; int contador=0; int soma=0; int media;
+        double num=0, contador = 0, soma = 0, media;
+        //cantador=-1
+        //soma=1
 
-        System.out.print("Enter a number: ");
-        num = input.nextInt();
-
-while (num!=-1) { //-1 é a opção para parar de pedir inputs
-
-    soma = soma + num;
-    contador++;
-    System.out.print("Enter a number: ");
-    num = input.nextInt();
-}
-    media = soma / contador;
-    System.out.println("A média é: " + media);
+        while (num != -1) { //-1 é a opção para parar de pedir inputs
+            System.out.print("Enter a number (-1 to stop): ");
+            num = input.nextDouble();
+            soma = soma + num;
+            contador++;
+        }
+        soma = soma + 1; //ou inicia a variavel assim
+        contador = contador - 1; // ou inicia a variavel assim
+        media = soma / contador;
+        System.out.println("A média é: " + media);
     }
 }

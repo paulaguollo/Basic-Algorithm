@@ -6,7 +6,7 @@ public class Ex11 {
     public static void main(String[] args) {
         Scanner input= new Scanner(System.in);
         System.out.println("__________ F03 | EX11 ___________");
-        System.out.println("xxx");
+        System.out.println("Choose a limit and salto and I will show you the numbers ultil the limit");
 
         int limite, salto, numero = 0;
 
