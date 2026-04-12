@@ -1,3 +1,11 @@
+// ============================================================
+// Módulo   : Algoritmia e Programação
+// Ficha    : Ficha Extra — Condicionais
+// Exercício: Ex01 — Maior ou menor de idade
+// Objetivo : Ler a idade do utilizador e indicar se é maior
+//            ou menor de idade (limite: 18 anos)
+// ============================================================
+
 package FichaExtraCondicionais;
 
 import java.util.Scanner;
@@ -14,7 +22,8 @@ public class Ex01 {
         System.out.print("What is the age? ");
         age = input.nextInt();
 
-        if (age>=18){
+        // Condição simples: >= 18 é maior de idade, caso contrário é menor
+        if (age >= 18) {
             System.out.print("You are maior de idade");
         } else {
             System.out.print("You are menor de idade");
