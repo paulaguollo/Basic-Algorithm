@@ -1,4 +1,4 @@
-# Algoritmia & Programação 🐿️
+# Algoritmia & Programação 
 
 Hands-on exercises from the **Algorithms & Programming** module building a solid foundation in algorithmic thinking and translating logic into clean, working code.
 
