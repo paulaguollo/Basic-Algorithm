@@ -1,3 +1,10 @@
+// ============================================================
+// Módulo   : Algoritmia e Programação
+// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
+// Exercício: Ex13 — Converter horas de formato 24h para AM/PM
+// Objetivo : Ler horas e minutos e apresentar no formato AM/PM
+// ============================================================
+
 package FichaPratica02;
 
 import java.util.Scanner;
@@ -17,11 +24,13 @@ public class Ex13 {
         System.out.print("Minutos: ");
         minutos = input.nextInt();
 
-        if (horas < 12) { //Manhã (before 11:59 am will be 12pm)
-            System.out.println(horas+":"+minutos+" AM");
-        } else { //Tarde
-            horas = horas - 12;
-            System.out.println(horas+":"+minutos+" PM");
+        // Se horas < 12 estamos de manhã (AM)
+        // Se horas >= 12 estamos à tarde/noite (PM) e subtrai-se 12
+        if (horas < 12) {
+            System.out.println(horas + ":" + minutos + " AM");
+        } else {
+            horas = horas - 12; // converter para formato 12h
+            System.out.println(horas + ":" + minutos + " PM");
         }
     }
 }

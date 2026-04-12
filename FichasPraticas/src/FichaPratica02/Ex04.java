@@ -1,3 +1,11 @@
+// ============================================================
+// Módulo   : Algoritmia e Programação
+// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
+// Exercício: Ex04 — Pontos de F1 por posição (switch)
+// Objetivo : Dado o lugar de chegada de um piloto, indicar
+//            quantos pontos ele recebe (1º=10, 2º=8, …, 8º=1)
+// ============================================================
+
 package FichaPratica02;
 
 import java.util.Scanner;
@@ -14,8 +22,11 @@ public class Ex04 {
         System.out.print("Enter pilot's place: ");
         place = input.nextInt();
 
+        // switch compara o valor de 'place' com cada case
+        // break impede que a execução "caia" para o case seguinte
+        // default é executado quando nenhum case corresponde
         switch (place) {
-            case 1: //o 1 é sobre o input que a pessoa coloca
+            case 1:
                 System.out.println("Win 10 points");
                 break;
             case 2:

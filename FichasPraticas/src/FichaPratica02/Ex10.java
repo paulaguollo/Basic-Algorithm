@@ -1,3 +1,11 @@
+// ============================================================
+// Módulo   : Algoritmia e Programação
+// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
+// Exercício: Ex10 — Calculadora com switch
+// Objetivo : Ler dois números e um operador (+, -, *, /)
+//            e executar a operação escolhida com switch
+// ============================================================
+
 package FichaPratica02;
 
 import java.util.Scanner;
@@ -22,12 +30,15 @@ public class Ex10 {
         System.out.print("Choose mathematical operation: ");
         signal = input.next();
 
-        soma= value1 + value2;
-        sub= value1 - value2;
-        div= value1 / value2;
-        mult= value1 * value2;
+        // Pré-calcula todos os resultados possíveis
+        soma = value1 + value2;
+        sub  = value1 - value2;
+        div  = value1 / value2;
+        mult = value1 * value2;
 
-        switch(signal){
+        // switch compara a String 'signal' com cada case
+        // Apenas o case correspondente ao operador escolhido é executado
+        switch (signal) {
             case "+":
                 System.out.println(soma);
                 break;

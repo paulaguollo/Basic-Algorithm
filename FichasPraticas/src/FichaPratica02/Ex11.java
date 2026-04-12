@@ -1,3 +1,11 @@
+// ============================================================
+// Módulo   : Algoritmia e Programação
+// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
+// Exercício: Ex11 — Saldo bancário com depósito ou levantamento
+// Objetivo : Aplicar uma movimentação positiva (depósito) ou
+//            negativa (levantamento) ao saldo e validar saldo suficiente
+// ============================================================
+
 package FichaPratica02;
 
 import java.util.Scanner;
@@ -10,8 +18,8 @@ public class Ex11 {
         System.out.println("bank balance and transactions");
 
         int saldo, movimento;
-        int deposito; //movimento positivo
-        int retirada; //movimento negativo
+        int deposito;  // resultado quando a movimentação é positiva
+        int retirada;  // resultado quando a movimentação é negativa
 
         System.out.print("Introduza o seu saldo: ");
         saldo = input.nextInt();
@@ -19,19 +27,20 @@ public class Ex11 {
         System.out.print("Introduza a movimentação desejada (depositar (+) ou retirar (-): ");
         movimento = input.nextInt();
 
-        if(movimento >= 1){
-            deposito= saldo+movimento;
+        // Se a movimentação for positiva → é um depósito
+        if (movimento >= 1) {
+            deposito = saldo + movimento;
             System.out.println("Seu saldo atual é: " + deposito);
         }
 
-        //se o valor que eu quero movimentar for negativo quer dizer que é um retirada
-        //entrao preciso fazer saldo-movimento
-        //mas se a retirada (saldo-movimento) for <0 entao aparece mensagem
-        if(movimento < 0){
-            retirada= saldo-(-movimento); //como bota negativo na movimentação precisa trocar o sinal pra nao ficar positivo
-            if(retirada > 0) {
+        // Se a movimentação for negativa → é um levantamento
+        // Usa-se -movimento para tornar o valor positivo antes de subtrair
+        if (movimento < 0) {
+            retirada = saldo - (-movimento);
+            if (retirada > 0) {
                 System.out.println("Seu saldo atual é: " + retirada);
             } else {
+                // Saldo ficaria negativo → operação recusada
                 System.out.println("Operaçãp inválida. Saldo Insuficiente");
             }
         }

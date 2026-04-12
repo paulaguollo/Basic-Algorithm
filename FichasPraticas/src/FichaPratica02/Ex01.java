@@ -1,3 +1,10 @@
+// ============================================================
+// Módulo   : Algoritmia e Programação
+// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
+// Exercício: Ex01 — Maior de dois números
+// Objetivo : Comparar dois inteiros e indicar qual é o maior
+// ============================================================
+
 package FichaPratica02;
 
 import java.util.Scanner;
@@ -17,6 +24,8 @@ public class Ex01 {
         System.out.print("Introduza outro valor: ");
         valor2 = input.nextInt();
 
+        // if verifica a condição; se valor1 for maior, apresenta valor1
+        // caso contrário (else) apresenta valor2 (inclui o caso de igualdade)
         if (valor1 > valor2) {
             System.out.println("O maior valor é: " + valor1);
         } else {
