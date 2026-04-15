@@ -2,7 +2,7 @@ package FichaPratica05;
 
 import java.util.Scanner;
 
-public class Ex03 {
+public class Ex04 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -18,14 +18,14 @@ public class Ex03 {
             vetor[i] = input.nextInt();
         }
 
-        int maior = vetor[0]; //NAO PODE INICIAR EM 0. mas pode ser a posição 0 ou qualquer outra mas preciso garantir que sei o tamanho do array
+        int menor = vetor[0]; //NAO PODE INICIAR EM 0. mas pode ser a posição 0 ou qualquer outra mas preciso garantir que sei o tamanho do array
 
         for (int i = 0; i < vetor.length; i++) {
-            if(vetor[i] > maior) {
-                maior = vetor[i];
+            if(vetor[i] < menor) {
+                menor = vetor[i];
             }
         }
-        System.out.print("O maior elemento é:"+maior);
+        System.out.print("O menor elemento é:"+ menor);
     }
 }
 
