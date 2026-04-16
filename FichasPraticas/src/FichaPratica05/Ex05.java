@@ -7,7 +7,7 @@ public class Ex05 {
         Scanner input = new Scanner(System.in);
 
         //criação de variável
-        double[] vetor = new double[3];
+        double[] vetor = new double[10];
 
         System.out.println("----- Leitura do Vetor -----");
 
@@ -16,7 +16,7 @@ public class Ex05 {
             vetor[i] = input.nextDouble();
         }
 
-        System.out.println("----- Soma Total dos valores -----");
+        System.out.println("----- Soma Total dos Valores -----");
         double soma = 0;
 
         for(int i=0; i < vetor.length; i++) {
