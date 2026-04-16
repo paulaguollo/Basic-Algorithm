@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
-// Exercício: Ex11 — Saldo bancário com depósito ou levantamento
-// Objetivo : Aplicar uma movimentação positiva (depósito) ou
-//            negativa (levantamento) ao saldo e validar saldo suficiente
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 02 — Conditionals (if / switch)
+// Exercise : Ex11 — Bank balance with deposit or withdrawal
+// Goal     : Apply a positive (deposit) or negative (withdrawal)
+//            transaction to a balance and validate sufficient funds
 // ============================================================
 
 package FichaPratica02;
@@ -14,34 +14,34 @@ public class Ex11 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F02 | EX11 ___________");
-        System.out.println("bank balance and transactions");
+        System.out.println("__________ FP02 | EX11 ___________");
+        System.out.println("Bank balance and transactions");
 
-        int saldo, movimento;
-        int deposito;  // resultado quando a movimentação é positiva
-        int retirada;  // resultado quando a movimentação é negativa
+        int balance, transaction;
+        int deposit;    // result when the transaction is positive
+        int withdrawal; // result when the transaction is negative
 
-        System.out.print("Introduza o seu saldo: ");
-        saldo = input.nextInt();
+        System.out.print("Enter your balance: ");
+        balance = input.nextInt();
 
-        System.out.print("Introduza a movimentação desejada (depositar (+) ou retirar (-): ");
-        movimento = input.nextInt();
+        System.out.print("Enter the transaction (deposit (+) or withdraw (-): ");
+        transaction = input.nextInt();
 
-        // Se a movimentação for positiva → é um depósito
-        if (movimento >= 1) {
-            deposito = saldo + movimento;
-            System.out.println("Seu saldo atual é: " + deposito);
+        // If the transaction is positive → it is a deposit
+        if (transaction >= 1) {
+            deposit = balance + transaction;
+            System.out.println("Your current balance is: " + deposit);
         }
 
-        // Se a movimentação for negativa → é um levantamento
-        // Usa-se -movimento para tornar o valor positivo antes de subtrair
-        if (movimento < 0) {
-            retirada = saldo - (-movimento);
-            if (retirada > 0) {
-                System.out.println("Seu saldo atual é: " + retirada);
+        // If the transaction is negative → it is a withdrawal
+        // Use -transaction to turn the value positive before subtracting
+        if (transaction < 0) {
+            withdrawal = balance - (-transaction);
+            if (withdrawal > 0) {
+                System.out.println("Your current balance is: " + withdrawal);
             } else {
-                // Saldo ficaria negativo → operação recusada
-                System.out.println("Operaçãp inválida. Saldo Insuficiente");
+                // Balance would go negative → operation refused
+                System.out.println("Invalid operation. Insufficient balance");
             }
         }
     }

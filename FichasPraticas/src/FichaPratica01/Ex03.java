@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 01 — Tipos de Dados e Input/Output
-// Exercício: Ex03 — Área e Perímetro de um retângulo
-// Objetivo : Ler altura e comprimento e calcular área e perímetro
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 01 — Data Types & Input/Output
+// Exercise : Ex03 — Area and Perimeter of a rectangle
+// Goal     : Read height and length and calculate area and perimeter
 // ============================================================
 
 package FichaPratica01;
@@ -12,29 +12,29 @@ import java.util.Scanner;
 public class Ex03 {
     public static void main(String[] args) {
 
-        // Scanner para leitura de dados do teclado
+        // Scanner for reading keyboard input
         Scanner input = new Scanner(System.in);
 
-        // lado1 = altura | lado2 = comprimento
-        int lado1, lado2, area, perimetro;
-        System.out.println("__________ F01 | EX03 __________");
+        // side1 = height | side2 = length
+        int side1, side2, area, perimeter;
+        System.out.println("__________ FP01 | EX03 __________");
 
-        // Leitura das dimensões do retângulo
-        System.out.print("Coloque o valor da altura: ");
-        lado1 = input.nextInt();
+        // Read the rectangle dimensions
+        System.out.print("Enter the height: ");
+        side1 = input.nextInt();
 
-        System.out.print("Coloque o valor do comprimento: ");
-        lado2 = input.nextInt();
+        System.out.print("Enter the length: ");
+        side2 = input.nextInt();
 
-        // Fórmula da área: base × altura
-        area = lado1 * lado2;
+        // Area formula: base × height
+        area = side1 * side2;
 
-        // Fórmula do perímetro: soma dos 4 lados → 2×(lado1 + lado2)
-        perimetro = (lado1 * 2) + (lado2 * 2);
+        // Perimeter formula: sum of all 4 sides → 2×(side1 + side2)
+        perimeter = (side1 * 2) + (side2 * 2);
 
-        // Apresentação dos resultados
-        System.out.println("Esse é o perímetro do retangulo: " + perimetro);
-        System.out.println("Essa é a área do retângulo: "      + area);
+        // Display the results
+        System.out.println("Rectangle perimeter: " + perimeter);
+        System.out.println("Rectangle area: "      + area);
 
     }
 }

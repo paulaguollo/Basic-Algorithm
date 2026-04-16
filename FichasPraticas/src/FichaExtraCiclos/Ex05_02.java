@@ -1,10 +1,10 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex05_02 — Pirâmide centrada com número da linha
-// Objetivo : Imprimir uma pirâmide onde a linha N tem (2N-1)
-//            repetições do dígito N, centrada com espaços
-//            Exemplo (5 linhas):
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex05_02 — Centred pyramid with row number
+// Goal     : Print a pyramid where row N has (2N-1)
+//            repetitions of digit N, centred with spaces
+//            Example (5 rows):
 //                1
 //               222
 //              33333
@@ -17,27 +17,27 @@ package FichaExtraCiclos;
 public class Ex05_02 {
     public static void main(String[] args) {
 
-        int linhas  = 5;           // número total de linhas
-        int espacos = linhas - 1;  // espaços iniciais (máximo na 1ª linha)
+        int rows   = 5;          // total number of rows
+        int spaces = rows - 1;   // initial spaces (maximum on the 1st row)
 
-        // Ciclo externo: i é o número da linha e o dígito a imprimir
-        for (int i = 1; i <= linhas; i++) {
+        // Outer loop: i is the row number and the digit to print
+        for (int i = 1; i <= rows; i++) {
 
-            // Imprime os espaços de alinhamento (centra a pirâmide)
-            for (int j = 0; j < espacos; j++) {
+            // Print alignment spaces (centres the pyramid)
+            for (int j = 0; j < spaces; j++) {
                 System.out.print(" ");
             }
 
-            // Imprime (2*i - 1) repetições do dígito i
-            // Fórmula: linha 1 → 1 dígito; linha 2 → 3; linha 3 → 5; etc.
+            // Print (2*i - 1) repetitions of digit i
+            // Formula: row 1 → 1 digit; row 2 → 3; row 3 → 5; etc.
             for (int j = 1; j <= (2 * i) - 1; j++) {
                 System.out.print(i);
             }
 
             System.out.println();
 
-            // Reduz os espaços à esquerda para a próxima linha
-            espacos--;
+            // Reduce left spaces for the next row
+            spaces--;
         }
     }
 }

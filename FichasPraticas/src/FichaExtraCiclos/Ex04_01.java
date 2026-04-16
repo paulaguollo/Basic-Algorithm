@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex04_01 — Padrão retângulo de asteriscos
-// Objetivo : Imprimir um retângulo de asteriscos com
-//            4 linhas e 10 colunas usando dois for aninhados
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex04_01 — Rectangle pattern of asterisks
+// Goal     : Print a rectangle of asterisks with
+//            4 rows and 10 columns using two nested for loops
 // ============================================================
 
 package FichaExtraCiclos;
@@ -11,20 +11,21 @@ package FichaExtraCiclos;
 public class Ex04_01 {
     public static void main(String[] args) {
 
-        int linhas  = 4;  // número total de linhas do retângulo
-        int colunas = 10; // número total de colunas do retângulo
+        int rows    = 4;  // total number of rows in the rectangle
+        int columns = 10; // total number of columns in the rectangle
 
-        // Ciclo externo: controla cada linha
-        for (int i = 0; i < linhas; i++) {
+        // Outer loop: controls each row
+        for (int i = 0; i < rows; i++) {
 
-            // Ciclo interno: imprime um '*' por cada coluna (sem newline)
-            for (int j = 0; j < colunas; j++) {
+            // Inner loop: prints one '*' per column (no newline)
+            for (int j = 0; j < columns; j++) {
                 System.out.print("*");
             }
 
-            // Após preencher uma linha completa, avança para a linha seguinte
+            // After filling a complete row, move to the next line
             System.out.println();
         }
+
     }
 
 }

@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 01 — Tipos de Dados e Input/Output
-// Exercício: Ex08 — Duração total de um álbum (3 músicas)
-// Objetivo : Somar os tempos de 3 músicas (min:seg) e apresentar
-//            o total no formato hh:mm:ss
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 01 — Data Types & Input/Output
+// Exercise : Ex08 — Total duration of an album (3 songs)
+// Goal     : Sum the duration of 3 songs (min:sec) and display
+//            the total in hh:mm:ss format
 // ============================================================
 
 package FichaPratica01;
@@ -15,47 +15,47 @@ public class Ex08 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F01 | EX08 ___________");
-        System.out.println("Vou calcular o total do tempo de música do seu albúm");
+        System.out.println("__________ FP01 | EX08 ___________");
+        System.out.println("I will calculate the total duration of your album");
 
-        // Variáveis para o resultado final em h/m/s
-        int horas, totalminutos, totalsegundos, converteminutos, somasegundos;
+        // Variables for the final result in h/m/s
+        int totalMinutes, totalSeconds, convertMinutes, sumSeconds;
         int hh, mm, ss;
 
-        // Variáveis para os minutos e segundos de cada música
-        int minutos1, minutos2, minutos3;
-        int segundos1, segundos2, segundos3;
+        // Variables for minutes and seconds of each song
+        int minutes1, minutes2, minutes3;
+        int seconds1, seconds2, seconds3;
 
-        // Leitura do tempo da música 1
-        System.out.print("Introduza quantos minutos tem a música 1? ");
-        minutos1 = input.nextInt();
-        System.out.print("Introduza quantos segundos tem a música 1? ");
-        segundos1 = input.nextInt();
+        // Read song 1 duration
+        System.out.print("How many minutes does song 1 have? ");
+        minutes1 = input.nextInt();
+        System.out.print("How many seconds does song 1 have? ");
+        seconds1 = input.nextInt();
 
-        // Leitura do tempo da música 2
-        System.out.print("Introduza quantos minutos tem a música 2? ");
-        minutos2 = input.nextInt();
-        System.out.print("Introduza quantos segundos tem a música 2? ");
-        segundos2 = input.nextInt();
+        // Read song 2 duration
+        System.out.print("How many minutes does song 2 have? ");
+        minutes2 = input.nextInt();
+        System.out.print("How many seconds does song 2 have? ");
+        seconds2 = input.nextInt();
 
-        // Leitura do tempo da música 3
-        System.out.print("Introduza quantos minutos tem a música 3? ");
-        minutos3 = input.nextInt();
-        System.out.print("Introduza quantos segundos tem a música 3? ");
-        segundos3 = input.nextInt();
+        // Read song 3 duration
+        System.out.print("How many minutes does song 3 have? ");
+        minutes3 = input.nextInt();
+        System.out.print("How many seconds does song 3 have? ");
+        seconds3 = input.nextInt();
 
-        // Soma de todos os segundos e minutos
-        totalsegundos  = segundos1 + segundos2 + segundos3;
-        totalminutos   = minutos1  + minutos2  + minutos3;
+        // Sum all seconds and minutes
+        totalSeconds = seconds1 + seconds2 + seconds3;
+        totalMinutes = minutes1 + minutes2 + minutes3;
 
-        // Converter os minutos totais em segundos e somar a todos os segundos
-        converteminutos = totalminutos * 60;
-        somasegundos    = totalsegundos + converteminutos; // tudo em segundos
+        // Convert total minutes to seconds and add to all seconds
+        convertMinutes = totalMinutes * 60;
+        sumSeconds     = totalSeconds + convertMinutes; // everything in seconds
 
-        // Converter os segundos totais em horas, minutos e segundos
-        hh = somasegundos / 3600;                      // quantas horas completas cabem
-        mm = somasegundos / 60 - (hh * 60);            // minutos restantes após as horas
-        ss = somasegundos - (hh * 3600) - (mm * 60);   // segundos restantes
+        // Convert total seconds to hours, minutes and seconds
+        hh = sumSeconds / 3600;                      // how many full hours fit
+        mm = sumSeconds / 60 - (hh * 60);            // remaining minutes after hours
+        ss = sumSeconds - (hh * 3600) - (mm * 60);   // remaining seconds
 
         System.out.println("Total: " + hh + "h" + mm + "m" + ss + "s");
     }

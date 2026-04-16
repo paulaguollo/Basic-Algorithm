@@ -1,28 +1,28 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 03 — Ciclos (while)
-// Exercício: Ex07 — Soma de 1 a 100
-// Objetivo : Imprimir os números de 1 a 100 e apresentar a soma total
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 03 — Loops (while)
+// Exercise : Ex07 — Sum from 1 to 100
+// Goal     : Print the numbers from 1 to 100 and display the total sum
 // ============================================================
 
 package FichaPratica03;
 
 public class Ex07 {
     public static void main(String[] args) {
-        System.out.println("__________ F03 | EX07 ___________");
-        System.out.println("A program that shows numbers from 0 to 100 and its sum");
+        System.out.println("__________ FP03 | EX07 ___________");
+        System.out.println("A program that shows numbers from 0 to 100 and their sum");
 
-        int soma = 0; // acumulador — começa em 0 e vai somando cada número
-        int i    = 1; // contador — começa em 1
+        int sum = 0; // accumulator — starts at 0 and adds each number
+        int i   = 1; // counter — starts at 1
 
-        // A cada iteração: imprime o número atual e adiciona-o ao acumulador
+        // Each iteration: print the current number and add it to the accumulator
         while (i <= 100) {
             System.out.println(i);
-            soma = soma + i; // acumula o valor de i
+            sum = sum + i; // accumulate the value of i
             i++;
         }
 
-        // Apresenta a soma total após o ciclo terminar
-        System.out.println("A soma é: " + soma);
+        // Display the total sum after the loop ends
+        System.out.println("The sum is: " + sum);
     }
 }

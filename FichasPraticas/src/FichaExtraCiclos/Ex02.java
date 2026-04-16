@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex02 — Múltiplos de 3 até 255
-// Objetivo : Imprimir apenas os números divisíveis por 3
-//            no intervalo [1, 255]
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex02 — Multiples of 3 up to 255
+// Goal     : Print only numbers divisible by 3
+//            in the range [1, 255]
 // ============================================================
 
 package FichaExtraCiclos;
@@ -11,10 +11,10 @@ package FichaExtraCiclos;
 public class Ex02 {
     public static void main(String[] args) {
 
-        // Percorre todos os números de 1 a 255
-        // O if dentro do for filtra apenas os múltiplos de 3
+        // Traverses all numbers from 1 to 255
+        // The if inside the for filters only multiples of 3
         for (int i = 1; i <= 255; i++) {
-            if (i % 3 == 0) { // resto da divisão por 3 igual a 0 → múltiplo de 3
+            if (i % 3 == 0) { // remainder of division by 3 equals 0 → multiple of 3
                 System.out.println(i);
             }
         }

@@ -1,10 +1,10 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex05_03 — Padrão de números espelhados (pirâmide)
-// Objetivo : Imprimir um padrão onde cada linha N mostra os
-//            números de N até 1 e depois de 2 até N (espelho)
-//            Exemplo (4 linhas):
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex05_03 — Mirrored number pattern (pyramid)
+// Goal     : Print a pattern where each row N shows numbers
+//            from N down to 1 and then from 2 up to N (mirror)
+//            Example (4 rows):
 //               1
 //              212
 //             32123
@@ -16,23 +16,23 @@ package FichaExtraCiclos;
 public class Ex05_03 {
     public static void main(String[] args) {
 
-        int linhas = 4; // número total de linhas
+        int rows = 4; // total number of rows
 
-        // Ciclo externo: i representa a linha atual
-        for (int i = 1; i <= linhas; i++) {
+        // Outer loop: i represents the current row
+        for (int i = 1; i <= rows; i++) {
 
-            // Espaços à esquerda para centrar o padrão
-            for (int j = 1; j <= linhas - i; j++) {
+            // Left spaces to centre the pattern
+            for (int j = 1; j <= rows - i; j++) {
                 System.out.print(" ");
             }
 
-            // Metade esquerda: conta de i até 1 (decrescente)
+            // Left half: count from i down to 1 (descending)
             for (int j = i; j >= 1; j--) {
                 System.out.print(j);
             }
 
-            // Metade direita: conta de 2 até i (crescente, espelhando a esquerda)
-            // Começa em 2 para não repetir o "1" central
+            // Right half: count from 2 up to i (ascending, mirroring the left)
+            // Starts at 2 to avoid repeating the central "1"
             for (int j = 2; j <= i; j++) {
                 System.out.print(j);
             }

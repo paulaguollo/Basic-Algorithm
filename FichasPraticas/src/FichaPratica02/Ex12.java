@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
-// Exercício: Ex12 — Menu CRUD simples (switch)
-// Objetivo : Apresentar um menu com 4 opções (Criar, Atualizar,
-//            Eliminar, Sair) e reagir à escolha com switch
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 02 — Conditionals (if / switch)
+// Exercise : Ex12 — Simple CRUD menu (switch)
+// Goal     : Display a menu with 4 options (Create, Update,
+//            Delete, Exit) and react to the choice using switch
 // ============================================================
 
 package FichaPratica02;
@@ -14,40 +14,40 @@ public class Ex12 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Variáveis declaradas mas não utilizadas neste exercício
-        // (apenas para reservar os nomes para uso futuro)
-        String criar, atualizar, emilinar, sair;
-        int opcao;
+        // Variables declared but not used in this exercise
+        // (reserved for future use)
+        String create, update, delete, exit;
+        int option;
 
-        // Apresentação do menu
-        System.out.println("__________ F02 | EX12 ___________");
-        System.out.println("O menu tem essas opções");
-        System.out.println("1. Criar ");
-        System.out.println("2. Atualizar ");
-        System.out.println("3. Eliminar");
-        System.out.println("4. Sair ");
+        // Display the menu
+        System.out.println("__________ FP02 | EX12 ___________");
+        System.out.println("The menu has these options");
+        System.out.println("1. Create ");
+        System.out.println("2. Update ");
+        System.out.println("3. Delete");
+        System.out.println("4. Exit ");
 
-        System.out.println("Digite o número que quer aceder");
+        System.out.println("Enter the number you want to access");
 
-        System.out.print("Número: ");
-        opcao = input.nextInt();
+        System.out.print("Number: ");
+        option = input.nextInt();
 
-        // switch executa apenas o bloco correspondente à opção escolhida
-        switch (opcao) {
+        // switch only executes the block matching the chosen option
+        switch (option) {
             case 1:
-                System.out.println("Criar");
+                System.out.println("Create");
                 break;
             case 2:
-                System.out.println("Atualizar");
+                System.out.println("Update");
                 break;
             case 3:
-                System.out.println("Eliminar");
+                System.out.println("Delete");
                 break;
             case 4:
-                System.out.println(" "); // Sair — sem mensagem específica
+                System.out.println(" "); // Exit — no specific message
                 break;
             default:
-                System.out.println("Opção Inválida");
+                System.out.println("Invalid option");
         }
     }
 }

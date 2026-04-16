@@ -1,10 +1,10 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 04 — Ciclos do-while e Menus
-// Exercício: Ex03 — Jogo de adivinhar o número secreto
-// Objetivo : Jogador 1 define um número secreto; Jogador 2 tenta
-//            adivinhar em quantas tentativas forem necessárias,
-//            recebendo dicas ("mais alto" / "mais baixo")
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 04 — do-while Loops & Menus
+// Exercise : Ex03 — Number guessing game
+// Goal     : Player 1 sets a secret number; Player 2 tries to
+//            guess it in as many attempts as needed,
+//            receiving hints ("higher" / "lower")
 // ============================================================
 
 package FichaPratica04;
@@ -14,34 +14,34 @@ import java.util.Scanner;
 public class Ex03 {
     public static void main(String[] args) {
 
-        // Scanner para leitura de dados do teclado
+        // Scanner for reading keyboard input
         Scanner input = new Scanner(System.in);
 
-        int numeroSecreto, palpite, contadorPalpites = 0;
+        int secretNumber, guess, guessCounter = 0;
 
-        // Jogador 1 define o número que Jogador 2 terá de adivinhar
-        System.out.print("JOGADOR 1 - Insira o número secreto ( 0 - 100 ): ");
-        numeroSecreto = input.nextInt();
+        // Player 1 sets the number that Player 2 has to guess
+        System.out.print("PLAYER 1 - Enter the secret number (0 - 100): ");
+        secretNumber = input.nextInt();
 
-        // do-while: Jogador 2 tenta sempre pelo menos uma vez
-        // O ciclo repete enquanto o palpite for diferente do número secreto
+        // do-while: Player 2 always tries at least once
+        // The loop repeats while the guess is different from the secret number
         do {
-            System.out.print("\nJOGADOR 2 - Tente adivinhar: ");
-            palpite = input.nextInt();
-            contadorPalpites++; // conta cada tentativa
+            System.out.print("\nPLAYER 2 - Try to guess: ");
+            guess = input.nextInt();
+            guessCounter++; // count each attempt
 
-            // Feedback para ajudar Jogador 2 a aproximar-se do número
-            if (palpite > numeroSecreto) {
-                System.out.println("O número secreto é mais baixo...");
+            // Feedback to help Player 2 get closer to the secret number
+            if (guess > secretNumber) {
+                System.out.println("The secret number is lower...");
             }
 
-            if (palpite < numeroSecreto) {
-                System.out.println("O número secreto é mais alto...");
+            if (guess < secretNumber) {
+                System.out.println("The secret number is higher...");
             }
 
-        } while (palpite != numeroSecreto); // sai do ciclo quando acertar
+        } while (guess != secretNumber); // exits the loop when the guess is correct
 
-        System.out.println("Parabéns! Acertaste no número secreto: " + numeroSecreto);
-        System.out.println("Foram precisas " + contadorPalpites + " tentativas.");
+        System.out.println("Congratulations! You guessed the secret number: " + secretNumber);
+        System.out.println("It took " + guessCounter + " attempts.");
     }
 }

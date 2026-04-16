@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Condicionais
-// Exercício: Ex02 — Peso na Lua
-// Objetivo : Calcular o peso equivalente na Lua
-//            (peso lunar ≈ 16% do peso na Terra) e validar o input
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Conditionals
+// Exercise : Ex02 — Weight on the Moon
+// Goal     : Calculate the equivalent weight on the Moon
+//            (lunar weight ≈ 16% of Earth weight) and validate input
 // ============================================================
 
 package FichaExtraCondicionais;
@@ -14,22 +14,22 @@ public class Ex02 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ PL CONDICIONAIS | EX02 ___________");
-        System.out.println("Esse seria seu peso na lua");
+        System.out.println("__________ EXTRA CONDITIONALS | EX02 ___________");
+        System.out.println("This would be your weight on the Moon");
 
-        double peso, pesolua;
+        double weight, moonWeight;
 
-        System.out.print("Insira o Peso em kg: ");
-        peso = input.nextDouble();
+        System.out.print("Enter weight in kg: ");
+        weight = input.nextDouble();
 
-        // A gravidade da Lua é ~16% da da Terra
-        pesolua = peso * 0.16;
+        // The Moon's gravity is ~16% of Earth's
+        moonWeight = weight * 0.16;
 
-        // Validação: peso deve ser positivo para fazer sentido
-        if (peso > 0) {
-            System.out.println("Este é o peso na lua: " + pesolua + " Kg");
+        // Validation: weight must be positive to make sense
+        if (weight > 0) {
+            System.out.println("Your weight on the Moon: " + moonWeight + " kg");
         } else {
-            System.out.println("Peso inválido. Tente outra vez com um número maior que 0.");
+            System.out.println("Invalid weight. Please try again with a number greater than 0.");
         }
     }
 }

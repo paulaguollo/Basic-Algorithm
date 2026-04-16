@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex01 — Imprimir 1 a 500 com for
-// Objetivo : Usar um ciclo for para listar todos os inteiros de 1 a 500
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex01 — Print 1 to 500 with for
+// Goal     : Use a for loop to list all integers from 1 to 500
 // ============================================================
 
 package FichaExtraCiclos;
@@ -10,8 +10,8 @@ package FichaExtraCiclos;
 public class Ex01 {
     public static void main(String[] args) {
 
-        // Ciclo for: inicialização (i=1) | condição (i<=500) | incremento (i++)
-        // Mais compacto que o while quando se sabe exatamente o número de iterações
+        // for loop: initialisation (i=1) | condition (i<=500) | increment (i++)
+        // More compact than while when the exact number of iterations is known
         for (int i = 1; i <= 500; i++) {
             System.out.println(i);
         }

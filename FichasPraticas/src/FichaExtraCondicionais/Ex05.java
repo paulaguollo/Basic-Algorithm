@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Condicionais
-// Exercício: Ex05 — Adivinhar o número (2 tentativas)
-// Objetivo : O utilizador tem 2 tentativas para adivinhar
-//            o número secreto (31); recebe dica se errar na 1ª
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Conditionals
+// Exercise : Ex05 — Guess the number (2 attempts)
+// Goal     : The user has 2 attempts to guess the secret number (31);
+//            receives a hint if they fail on the 1st attempt
 // ============================================================
 
 package FichaExtraCondicionais;
@@ -14,46 +14,46 @@ public class Ex05 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ PL CONDICIONAIS | EX05 ___________");
-        System.out.println("Voce tem duas tentativas pra acertar o número");
+        System.out.println("__________ EXTRA CONDITIONALS | EX05 ___________");
+        System.out.println("You have two attempts to guess the number");
 
-        int randomNumber = 31, tentativa = 1; // número secreto fixo
+        int secretNumber = 31, attempt = 1; // fixed secret number
 
-        // Verifica se o número está no intervalo válido e se a tentativa inicial é diferente
-        if (randomNumber >= 1 && randomNumber <= 100 && randomNumber != tentativa) {
-            System.out.print("Adivinhe o número (1 a 100): ");
-            tentativa = input.nextInt(); // 1ª tentativa
+        // Check if the number is in the valid range and if the initial attempt is different
+        if (secretNumber >= 1 && secretNumber <= 100 && secretNumber != attempt) {
+            System.out.print("Guess the number (1 to 100): ");
+            attempt = input.nextInt(); // 1st attempt
         }
 
-        if (tentativa == randomNumber) {
-            // Acertou na 1ª tentativa
-            System.out.println("Acertou o número misterioso! Parabéns");
+        if (attempt == secretNumber) {
+            // Correct on the 1st attempt
+            System.out.println("You guessed the mystery number! Congratulations");
 
-        } else if (tentativa > randomNumber) {
-            // Dica: está alto → pede 2ª tentativa
-            System.out.println("Está alto");
-            System.out.print("Adivinhe o número (1 a 100): ");
-            tentativa = input.nextInt();
-            if (tentativa == randomNumber) {
-                System.out.println("Acertou o número misterioso! Parabéns");
+        } else if (attempt > secretNumber) {
+            // Hint: too high → ask for 2nd attempt
+            System.out.println("Too high");
+            System.out.print("Guess the number (1 to 100): ");
+            attempt = input.nextInt();
+            if (attempt == secretNumber) {
+                System.out.println("You guessed the mystery number! Congratulations");
             } else {
-                System.out.println("Ficou sem tentativas... O número era " + randomNumber);
+                System.out.println("No more attempts... The number was " + secretNumber);
             }
 
-        } else if (tentativa < randomNumber) {
-            // Dica: está baixo → pede 2ª tentativa
-            System.out.println("Está baixo");
-            System.out.print("Adivinhe o número (1 a 100): ");
-            tentativa = input.nextInt();
-            if (tentativa == randomNumber) {
-                System.out.println("Acertou o número misterioso! Parabéns");
+        } else if (attempt < secretNumber) {
+            // Hint: too low → ask for 2nd attempt
+            System.out.println("Too low");
+            System.out.print("Guess the number (1 to 100): ");
+            attempt = input.nextInt();
+            if (attempt == secretNumber) {
+                System.out.println("You guessed the mystery number! Congratulations");
             } else {
-                System.out.println("Ficou sem tentativas... O número era " + randomNumber);
+                System.out.println("No more attempts... The number was " + secretNumber);
             }
 
-        } else if (!(randomNumber >= 1 && randomNumber <= 100)) {
-            // Caso o número secreto esteja fora do intervalo (nunca acontece com 31)
-            System.out.println("Número invalido. Tente novamente com um valor entre 1 e 100");
+        } else if (!(secretNumber >= 1 && secretNumber <= 100)) {
+            // Case where the secret number is out of range (never happens with 31)
+            System.out.println("Invalid number. Please try again with a value between 1 and 100");
         }
 
     }

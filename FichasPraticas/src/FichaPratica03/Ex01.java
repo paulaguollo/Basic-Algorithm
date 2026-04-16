@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 03 — Ciclos (while)
-// Exercício: Ex01 — Imprimir números de 1 a 250
-// Objetivo : Usar um ciclo while para listar os inteiros de 1 a 250
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 03 — Loops (while)
+// Exercise : Ex01 — Print numbers from 1 to 250
+// Goal     : Use a while loop to list integers from 1 to 250
 // ============================================================
 
 package FichaPratica03;
@@ -10,16 +10,16 @@ package FichaPratica03;
 public class Ex01 {
     public static void main(String[] args) {
 
-        System.out.println("__________ F03 | EX01 ___________");
+        System.out.println("__________ FP03 | EX01 ___________");
         System.out.println("A program that shows 1-250");
 
-        int num = 1; // variável contadora — começa em 1
+        int num = 1; // counter variable — starts at 1
 
-        // O ciclo while repete enquanto a condição (num <= 250) for verdadeira
-        // A cada iteração imprime o número e incrementa o contador
+        // The while loop repeats while the condition (num <= 250) is true
+        // Each iteration prints the number and increments the counter
         while (num <= 250) {
             System.out.println(num);
-            num = num + 1; // avança para o próximo número
+            num = num + 1; // move to the next number
         }
     }
 }

@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
-// Exercício: Ex03 — Imposto sobre o salário (4 escalões)
-// Objetivo : Calcular o imposto a pagar com 4 escalões:
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 02 — Conditionals (if / switch)
+// Exercise : Ex03 — Income tax on salary (4 brackets)
+// Goal     : Calculate the tax with 4 brackets:
 //            ≤ 15 000 → 20% | 15 001-20 000 → 30%
 //            20 001-25 000 → 35% | > 25 000 → 40%
 // ============================================================
@@ -15,16 +15,16 @@ public class Ex03 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F02 | EX03 ___________");
-        System.out.println("Tax to pay about the salary");
+        System.out.println("__________ FP02 | EX03 ___________");
+        System.out.println("Tax to pay based on the salary");
 
         double salary, tax;
 
         System.out.print("Enter salary value: ");
         salary = input.nextDouble();
 
-        // Cada if é independente (não usa else if), o que significa que
-        // cada condição é avaliada separadamente — só uma será verdadeira
+        // Each if is independent (no else if), meaning each condition
+        // is evaluated separately — only one will be true
         if (salary <= 15000) {
             tax = salary * 0.2;
             System.out.println("Pay 20% tax: " + tax);

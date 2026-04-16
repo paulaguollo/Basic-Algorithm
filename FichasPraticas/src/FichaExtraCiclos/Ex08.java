@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex08 — Potência sem usar Math.pow (for)
-// Objetivo : Calcular base^expoente através de multiplicações
-//            sucessivas num ciclo for
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex08 — Power without Math.pow (for)
+// Goal     : Calculate base^exponent through successive multiplications
+//            using a for loop
 // ============================================================
 
 package FichaExtraCiclos;
@@ -14,23 +14,23 @@ public class Ex08 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        double base, expoente, resultado = 1;
-        // resultado começa em 1 (elemento neutro da multiplicação)
+        double base, exponent, result = 1;
+        // result starts at 1 (neutral element of multiplication)
 
-        System.out.println("Vou te pedir dois numeros e te darei o resultado da potencia dele");
-        System.out.print("Digite o primeiro número: ");
+        System.out.println("Enter two numbers and I will give you the result of the power");
+        System.out.print("Enter the first number: ");
         base = input.nextDouble();
 
-        System.out.print("Digite o segundo número: ");
-        expoente = input.nextDouble();
+        System.out.print("Enter the second number: ");
+        exponent = input.nextDouble();
 
-        // Multiplica 'resultado' por 'base' tantas vezes quantas o 'expoente' indicar
-        // Ex: base=3, expoente=4 → 1 * 3 * 3 * 3 * 3 = 81
-        for (double i = 1; i <= expoente; i++) {
-            resultado *= base; // equivale a resultado = resultado * base
+        // Multiplies 'result' by 'base' as many times as 'exponent' indicates
+        // Ex: base=3, exponent=4 → 1 * 3 * 3 * 3 * 3 = 81
+        for (double i = 1; i <= exponent; i++) {
+            result *= base; // equivalent to result = result * base
         }
 
-        System.out.println("Esse é o resultado: " + resultado);
+        System.out.println("The result is: " + result);
 
     }
 }

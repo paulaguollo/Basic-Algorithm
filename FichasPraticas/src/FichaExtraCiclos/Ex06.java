@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex06 — Maior e menor de uma sequência (while + sentinela 0)
-// Objetivo : Ler números até o utilizador digitar 0 e apresentar
-//            o maior e o menor valor introduzido
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex06 — Largest and smallest from a sequence (while + sentinel 0)
+// Goal     : Read numbers until the user enters 0 and display
+//            the largest and smallest values entered
 // ============================================================
 
 package FichaExtraCiclos;
@@ -14,38 +14,38 @@ public class Ex06 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int num, maior, menor;
+        int num, largest, smallest;
 
-        // Lê o primeiro número antes do ciclo para inicializar maior e menor
-        System.out.print("Digite um número: ");
+        // Read the first number before the loop to initialise largest and smallest
+        System.out.print("Enter a number: ");
         num = input.nextInt();
 
-        // Inicializa maior e menor com o primeiro valor lido
-        maior = num;
-        menor = num;
+        // Initialise largest and smallest with the first value read
+        largest  = num;
+        smallest = num;
 
-        // O ciclo repete enquanto o utilizador não digitar 0 (sentinela)
+        // The loop repeats while the user doesn't enter 0 (sentinel)
         while (num != 0) {
 
-            // Atualiza o maior se o número atual for superior
-            if (num > maior) {
-                maior = num;
+            // Update largest if the current number is greater
+            if (num > largest) {
+                largest = num;
             }
-            // Atualiza o menor se o número atual for inferior
-            if (num < maior) { // nota: compara com maior (comportamento original mantido)
-                menor = num;
+            // Update smallest if the current number is smaller
+            if (num < largest) { // note: compares with largest (original behaviour kept)
+                smallest = num;
             }
 
-            System.out.print("Digite um número: ");
+            System.out.print("Enter a number: ");
             num = input.nextInt();
         }
 
-        // Se maior e menor continuarem 0, nenhum número válido foi introduzido
-        if (maior == 0 && menor == 0) {
-            System.out.println("Nenhum número válido foi introduzido");
+        // If largest and smallest are still 0, no valid number was entered
+        if (largest == 0 && smallest == 0) {
+            System.out.println("No valid number was entered");
         } else {
-            System.out.println("Você digitou 0 e o programa parou.");
-            System.out.println("Este é o menor número digitado: " + menor + " | Este é o maior: " + maior);
+            System.out.println("You entered 0 and the program stopped.");
+            System.out.println("Smallest number: " + smallest + " | Largest number: " + largest);
         }
     }
 }

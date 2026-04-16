@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 03 — Ciclos (while)
-// Exercício: Ex10 — Números pares até um limite
-// Objetivo : Ler um limite e imprimir os números pares de 2 até esse limite
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 03 — Loops (while)
+// Exercise : Ex10 — Even numbers up to a limit
+// Goal     : Read a limit and print all even numbers from 2 to that limit
 // ============================================================
 
 package FichaPratica03;
@@ -13,20 +13,20 @@ public class Ex10 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F03 | EX10 ___________");
-        System.out.println("Give me a number more than 2 and I will show you the even numbers from 2 to the limit");
+        System.out.println("__________ FP03 | EX10 ___________");
+        System.out.println("Give me a number greater than 2 and I will show you the even numbers from 2 to the limit");
 
-        int limite, numero = 2, salto = 2;
-        // numero: começa no primeiro par (2)
-        // salto : avança de 2 em 2 para manter sempre números pares
+        int limit, number = 2, step = 2;
+        // number: starts at the first even number (2)
+        // step  : advances by 2 to always stay on even numbers
 
         System.out.print("Enter limit number: ");
-        limite = input.nextInt();
+        limit = input.nextInt();
 
-        // Imprime pares enquanto não ultrapassar o limite
-        while (numero <= limite) {
-            System.out.println(numero);
-            numero = numero + salto; // avança para o próximo par
+        // Print even numbers while they don't exceed the limit
+        while (number <= limit) {
+            System.out.println(number);
+            number = number + step; // advance to the next even number
         }
     }
 }

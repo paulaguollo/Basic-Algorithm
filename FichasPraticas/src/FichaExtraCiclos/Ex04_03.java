@@ -1,10 +1,10 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex04_03 — Triângulo centrado de asteriscos (pirâmide)
-// Objetivo : Imprimir uma pirâmide de asteriscos centrada,
-//            com espaços à esquerda a diminuir e asteriscos a crescer
-//            Exemplo (5 linhas):
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex04_03 — Centred asterisk triangle (pyramid)
+// Goal     : Print a centred pyramid of asterisks,
+//            with decreasing spaces on the left and growing asterisks
+//            Example (5 rows):
 //                *
 //               ***
 //              *****
@@ -17,29 +17,29 @@ package FichaExtraCiclos;
 public class Ex04_03 {
     public static void main(String[] args) {
 
-        int linhas    = 5;           // número total de linhas da pirâmide
-        int espacos   = linhas - 1;  // espaços iniciais (máximo na 1ª linha)
-        int asteriscos = 1;          // asteriscos iniciais (mínimo na 1ª linha)
+        int rows       = 5;          // total number of rows in the pyramid
+        int spaces     = rows - 1;   // initial spaces (maximum on the 1st row)
+        int asterisks  = 1;          // initial asterisks (minimum on the 1st row)
 
-        // Ciclo principal: uma iteração por linha
-        for (int i = 0; i < linhas; i++) {
+        // Main loop: one iteration per row
+        for (int i = 0; i < rows; i++) {
 
-            // Imprime os espaços antes dos asteriscos (centra a pirâmide)
-            for (int j = 0; j < espacos; j++) {
+            // Print the spaces before the asterisks (centres the pyramid)
+            for (int j = 0; j < spaces; j++) {
                 System.out.print(" ");
             }
 
-            // Imprime os asteriscos da linha atual
-            for (int j = 0; j < asteriscos; j++) {
+            // Print the asterisks for the current row
+            for (int j = 0; j < asterisks; j++) {
                 System.out.print("*");
             }
 
-            // Avança para a linha seguinte
+            // Move to the next row
             System.out.println();
 
-            // A cada linha: menos um espaço e mais dois asteriscos
-            espacos--;
-            asteriscos += 2;
+            // Each row: one less space and two more asterisks
+            spaces--;
+            asterisks += 2;
         }
     }
 }

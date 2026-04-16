@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
-// Exercício: Ex04 — Pontos de F1 por posição (switch)
-// Objetivo : Dado o lugar de chegada de um piloto, indicar
-//            quantos pontos ele recebe (1º=10, 2º=8, …, 8º=1)
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 02 — Conditionals (if / switch)
+// Exercise : Ex04 — F1 points per finishing position (switch)
+// Goal     : Given a driver's finishing position, display
+//            how many points they receive (1st=10, 2nd=8, …, 8th=1)
 // ============================================================
 
 package FichaPratica02;
@@ -14,17 +14,17 @@ public class Ex04 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F02 | EX04 ___________");
-        System.out.println("How many points the pilot will win?");
+        System.out.println("__________ FP02 | EX04 ___________");
+        System.out.println("How many points will the pilot win?");
 
         int place;
 
         System.out.print("Enter pilot's place: ");
         place = input.nextInt();
 
-        // switch compara o valor de 'place' com cada case
-        // break impede que a execução "caia" para o case seguinte
-        // default é executado quando nenhum case corresponde
+        // switch compares the value of 'place' with each case
+        // break prevents execution from "falling through" to the next case
+        // default runs when no case matches
         switch (place) {
             case 1:
                 System.out.println("Win 10 points");
@@ -48,10 +48,10 @@ public class Ex04 {
                 System.out.println("Win 2 points");
                 break;
             case 8:
-                System.out.println("Win 1 points");
+                System.out.println("Win 1 point");
                 break;
             default:
-                System.out.println("Place more than 8 so it is 0 points to win");
+                System.out.println("Place higher than 8th — 0 points");
         }
     }
 }

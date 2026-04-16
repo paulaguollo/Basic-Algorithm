@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
-// Exercício: Ex16 — Decomposição de valor em notas
-// Objetivo : Dado um valor múltiplo de 5, calcular o número
-//            mínimo de notas (200, 100, 50, 20, 10, 5) necessárias
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 02 — Conditionals (if / switch)
+// Exercise : Ex16 — Decompose a value into banknotes
+// Goal     : Given a multiple of 5, calculate the minimum number
+//            of banknotes (200, 100, 50, 20, 10, 5) needed
 // ============================================================
 
 package FichaPratica02;
@@ -14,45 +14,45 @@ public class Ex16 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F02 | EX16 ___________");
-        System.out.println("Me diga um valor multiplo de 5 e eu te digo quantas notas precisa para ser decomponto");
+        System.out.println("__________ FP02 | EX16 ___________");
+        System.out.println("Enter a multiple of 5 and I will tell you how many banknotes are needed");
 
-        int valor, numeroNotas;
+        int value, numberOfNotes;
 
         System.out.print("Enter value: ");
-        valor = input.nextInt();
+        value = input.nextInt();
 
-        // Só faz sentido decompor se o valor for múltiplo de 5
-        if (valor % 5 == 0) {
+        // Only makes sense to decompose if the value is a multiple of 5
+        if (value % 5 == 0) {
 
-            // Para cada denominação: calcular quantas notas cabem e guardar o resto
-            // A divisão inteira (/) dá o número de notas; o módulo (%) dá o resto a decompor
+            // For each denomination: calculate how many notes fit and store the remainder
+            // Integer division (/) gives the number of notes; modulo (%) gives the remainder
 
-            numeroNotas = valor / 200;
-            System.out.println("Quantidade de notas de 200$: " + numeroNotas);
-            valor = valor % 200; // resta decompor este valor
+            numberOfNotes = value / 200;
+            System.out.println("Number of 200 notes: " + numberOfNotes);
+            value = value % 200; // remainder to decompose
 
-            numeroNotas = valor / 100;
-            System.out.println("Quantidade de notas de 100$: " + numeroNotas);
-            valor = valor % 100;
+            numberOfNotes = value / 100;
+            System.out.println("Number of 100 notes: " + numberOfNotes);
+            value = value % 100;
 
-            numeroNotas = valor / 50;
-            System.out.println("Quantidade de notas de 50$: " + numeroNotas);
-            valor = valor % 50;
+            numberOfNotes = value / 50;
+            System.out.println("Number of 50 notes: " + numberOfNotes);
+            value = value % 50;
 
-            numeroNotas = valor / 20;
-            System.out.println("Quantidade de notas de 20$: " + numeroNotas);
-            valor = valor % 20;
+            numberOfNotes = value / 20;
+            System.out.println("Number of 20 notes: " + numberOfNotes);
+            value = value % 20;
 
-            numeroNotas = valor / 10;
-            System.out.println("Quantidade de notas de 10$: " + numeroNotas);
-            valor = valor % 10;
+            numberOfNotes = value / 10;
+            System.out.println("Number of 10 notes: " + numberOfNotes);
+            value = value % 10;
 
-            numeroNotas = valor / 5;
-            System.out.println("Quantidade de notas de 5$: " + numeroNotas);
+            numberOfNotes = value / 5;
+            System.out.println("Number of 5 notes: " + numberOfNotes);
 
         } else {
-            System.out.println("Não damos troco");
+            System.out.println("We don't give change for non-multiples of 5");
         }
     }
 }

@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
-// Exercício: Ex13 — Converter horas de formato 24h para AM/PM
-// Objetivo : Ler horas e minutos e apresentar no formato AM/PM
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 02 — Conditionals (if / switch)
+// Exercise : Ex13 — Convert 24h time to AM/PM format
+// Goal     : Read hours and minutes and display in AM/PM format
 // ============================================================
 
 package FichaPratica02;
@@ -13,24 +13,24 @@ public class Ex13 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F02 | EX13 ___________");
-        System.out.println("About hours");
+        System.out.println("__________ FP02 | EX13 ___________");
+        System.out.println("Time conversion to AM/PM");
 
-        int horas, minutos;
+        int hours, minutes;
 
-        System.out.print("Horas: ");
-        horas = input.nextInt();
+        System.out.print("Hours: ");
+        hours = input.nextInt();
 
-        System.out.print("Minutos: ");
-        minutos = input.nextInt();
+        System.out.print("Minutes: ");
+        minutes = input.nextInt();
 
-        // Se horas < 12 estamos de manhã (AM)
-        // Se horas >= 12 estamos à tarde/noite (PM) e subtrai-se 12
-        if (horas < 12) {
-            System.out.println(horas + ":" + minutos + " AM");
+        // If hours < 12 we are in the morning (AM)
+        // If hours >= 12 we are in the afternoon/evening (PM) and subtract 12
+        if (hours < 12) {
+            System.out.println(hours + ":" + minutes + " AM");
         } else {
-            horas = horas - 12; // converter para formato 12h
-            System.out.println(horas + ":" + minutos + " PM");
+            hours = hours - 12; // convert to 12h format
+            System.out.println(hours + ":" + minutes + " PM");
         }
     }
 }

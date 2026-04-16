@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 04 — Ciclos do-while e Menus
-// Exercício: Ex01 — Calculadora com repetição (do-while)
-// Objetivo : Realizar operações aritméticas em loop até o
-//            utilizador decidir sair (resposta diferente de 's')
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 04 — do-while Loops & Menus
+// Exercise : Ex01 — Calculator with repetition (do-while)
+// Goal     : Perform arithmetic operations in a loop until
+//            the user decides to quit (answer other than 'y')
 // ============================================================
 
 package FichaPratica04;
@@ -13,54 +13,54 @@ import java.util.Scanner;
 public class Ex01 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double num1, num2, resultado;
-        String operacao, continuar;
+        double num1, num2, result;
+        String operation, again;
 
-        // do-while garante que o bloco executa PELO MENOS UMA VEZ
-        // antes de verificar a condição de repetição
+        // do-while guarantees the block runs AT LEAST ONCE
+        // before checking the repetition condition
         do {
-            // Leitura dos dados
-            System.out.print("Introduza o primeiro valor: ");
+            // Read input data
+            System.out.print("Enter the first value: ");
             num1 = input.nextDouble();
-            System.out.print("Introduza o segundo valor: ");
+            System.out.print("Enter the second value: ");
             num2 = input.nextDouble();
-            System.out.print("Introduza a operação (+, -, *, /): ");
-            operacao = input.next();
+            System.out.print("Enter the operation (+, -, *, /): ");
+            operation = input.next();
 
-            // switch escolhe a operação com base no operador introduzido
-            switch (operacao) {
+            // switch chooses the operation based on the entered operator
+            switch (operation) {
                 case "+":
-                    resultado = num1 + num2;
-                    System.out.println("Resultado: " + resultado);
+                    result = num1 + num2;
+                    System.out.println("Result: " + result);
                     break;
                 case "-":
-                    resultado = num1 - num2;
-                    System.out.println("Resultado: " + resultado);
+                    result = num1 - num2;
+                    System.out.println("Result: " + result);
                     break;
                 case "*":
-                    resultado = num1 * num2;
-                    System.out.println("Resultado: " + resultado);
+                    result = num1 * num2;
+                    System.out.println("Result: " + result);
                     break;
                 case "/":
-                    // Validação: divisão por zero não é permitida
+                    // Validation: division by zero is not allowed
                     if (num2 != 0) {
-                        resultado = num1 / num2;
-                        System.out.println("Resultado: " + resultado);
+                        result = num1 / num2;
+                        System.out.println("Result: " + result);
                     } else {
-                        System.out.println("Erro: Divisão por zero!");
+                        System.out.println("Error: Division by zero!");
                     }
                     break;
                 default:
-                    System.out.println("Operação Inválida!");
+                    System.out.println("Invalid operation!");
                     break;
             }
 
-            // Pergunta ao utilizador se quer continuar
-            System.out.print("Deseja continuar? (s/n): ");
-            continuar = input.next();
+            // Ask the user if they want to continue
+            System.out.print("Do you want to continue? (y/n): ");
+            again = input.next();
 
-        } while (continuar.equalsIgnoreCase("s")); // repete se digitar 's' ou 'S'
+        } while (again.equalsIgnoreCase("y")); // repeat if 'y' or 'Y' is entered
 
-        System.out.println("Programa encerrado.");
+        System.out.println("Program closed.");
     }
 }

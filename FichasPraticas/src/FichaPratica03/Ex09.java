@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 03 — Ciclos (while)
-// Exercício: Ex09 — Média de números até introduzir -1
-// Objetivo : Ler números até o utilizador digitar -1 (sentinela)
-//            e calcular a média dos valores introduzidos
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 03 — Loops (while)
+// Exercise : Ex09 — Average of numbers until -1 is entered
+// Goal     : Read numbers until the user types -1 (sentinel)
+//            and calculate the average of the entered values
 // ============================================================
 
 package FichaPratica03;
@@ -14,24 +14,24 @@ public class Ex09 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F03 | EX09 ___________");
-        System.out.println("Give me numbers, until you enter the number -1, I will say the average of the entered numbers (excluding -1).");
+        System.out.println("__________ FP03 | EX09 ___________");
+        System.out.println("Give me numbers, until you enter -1, I will calculate the average (excluding -1).");
 
-        double num = 0, contador = 0, soma = 0, media;
+        double num = 0, counter = 0, sum = 0, average;
 
-        // O ciclo repete enquanto o utilizador não digitar -1 (valor sentinela)
+        // The loop repeats while the user hasn't entered -1 (sentinel value)
         while (num != -1) {
             System.out.print("Enter a number (-1 to stop): ");
             num = input.nextDouble();
-            soma = soma + num; // acumula todos os valores, incluindo o -1
-            contador++;        // conta todas as entradas, incluindo o -1
+            sum = sum + num; // accumulates all values, including the -1
+            counter++;       // counts all entries, including the -1
         }
 
-        // Corrige os efeitos do -1 que foi somado e contado indevidamente
-        soma     = soma + 1;      // cancela o -1 somado (soma - (-1) = soma + 1)
-        contador = contador - 1;  // desconta a contagem do -1
+        // Correct for the -1 that was incorrectly summed and counted
+        sum     = sum + 1;      // cancel the -1 that was summed (sum - (-1) = sum + 1)
+        counter = counter - 1;  // discount the count of -1
 
-        media = soma / contador;
-        System.out.println("A média é: " + media);
+        average = sum / counter;
+        System.out.println("The average is: " + average);
     }
 }

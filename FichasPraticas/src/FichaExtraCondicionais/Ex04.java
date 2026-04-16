@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Condicionais
-// Exercício: Ex04 — Vogal ou Consoante (switch)
-// Objetivo : Ler uma letra e indicar se é vogal ou consoante,
-//            usando switch com fall-through nos cases de vogais
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Conditionals
+// Exercise : Ex04 — Vowel or Consonant (switch)
+// Goal     : Read a letter and indicate if it is a vowel or consonant,
+//            using switch with fall-through on vowel cases
 // ============================================================
 
 package FichaExtraCondicionais;
@@ -14,28 +14,28 @@ public class Ex04 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ PL CONDICIONAIS | EX04 ___________");
-        System.out.println("Escolha uma letra e eu te digo se é vogal ou consoante");
+        System.out.println("__________ EXTRA CONDITIONALS | EX04 ___________");
+        System.out.println("Choose a letter and I will tell you if it is a vowel or consonant");
 
         String letter;
 
-        System.out.print("Digite uma letra do alfabeto: ");
-        // toLowerCase converte para minúscula para simplificar a comparação
+        System.out.print("Enter a letter of the alphabet: ");
+        // toLowerCase converts to lowercase to simplify the comparison
         letter = input.next().toLowerCase();
 
-        // Fall-through: os cases de vogais não têm break entre si,
-        // pelo que qualquer vogal cai até ao mesmo println
+        // Fall-through: vowel cases have no break between them,
+        // so any vowel falls through to the same println
         switch (letter) {
             case "a":
             case "e":
             case "i":
             case "o":
             case "u":
-                System.out.println(letter + " é uma vogal.");
+                System.out.println(letter + " is a vowel.");
                 break;
             default:
-                // Tudo o que não for vogal é tratado como consoante
-                System.out.println(letter + " é uma consoante.");
+                // Anything that is not a vowel is treated as a consonant
+                System.out.println(letter + " is a consonant.");
         }
 
     }

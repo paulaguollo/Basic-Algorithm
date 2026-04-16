@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Condicionais
-// Exercício: Ex03 — Desconto de 10% em compras ≥ 100€
-// Objetivo : Aplicar 10% de desconto se o preço for >= 100,
-//            caso contrário apresentar o preço original
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Conditionals
+// Exercise : Ex03 — 10% discount on purchases >= 100€
+// Goal     : Apply a 10% discount if the price is >= 100,
+//            otherwise display the original price
 // ============================================================
 
 package FichaExtraCondicionais;
@@ -14,22 +14,22 @@ public class Ex03 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ PL CONDICIONAIS | EX03 ___________");
-        System.out.println("Se gastar mais de 100 euros tem 10% de desconto");
+        System.out.println("__________ EXTRA CONDITIONALS | EX03 ___________");
+        System.out.println("Spend more than 100 euros and get a 10% discount");
 
-        double preco, comdesconto;
+        double price, discountedPrice;
 
-        System.out.print("Introduza o preço: ");
-        preco = input.nextDouble();
+        System.out.print("Enter the price: ");
+        price = input.nextDouble();
 
-        // Pré-calcula o preço com desconto (multiplica por 0.90 = desconto de 10%)
-        comdesconto = preco * 0.90;
+        // Pre-calculate the discounted price (multiply by 0.90 = 10% off)
+        discountedPrice = price * 0.90;
 
-        // Só aplica o desconto se o preço for >= 100
-        if (preco >= 100) {
-            System.out.println(comdesconto + "$ é o valor com 10% de desconto");
+        // Only apply the discount if the price is >= 100
+        if (price >= 100) {
+            System.out.println(discountedPrice + "$ is the value with 10% discount");
         } else {
-            System.out.println(preco + "$ é um valor sem desconto. Precisa ser pelo menos 100$");
+            System.out.println(price + "$ has no discount. It must be at least 100$");
         }
 
     }

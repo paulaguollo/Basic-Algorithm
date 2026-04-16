@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
-// Exercício: Ex02 — Imposto sobre o salário (2 escalões)
-// Objetivo : Calcular o imposto a pagar consoante o salário:
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 02 — Conditionals (if / switch)
+// Exercise : Ex02 — Income tax on salary (2 brackets)
+// Goal     : Calculate the tax based on salary:
 //            ≤ 15 000 → 20% | > 15 000 → 30%
 // ============================================================
 
@@ -17,18 +17,18 @@ public class Ex02 {
 
         double salary, tax;
 
-        System.out.println("__________ F02 | EX02 ___________");
-        System.out.println("Tax to pay about the salary");
+        System.out.println("__________ FP02 | EX02 ___________");
+        System.out.println("Tax to pay based on the salary");
 
         System.out.print("Enter salary value: ");
         salary = input.nextDouble();
 
-        // Estrutura if-else com dois escalões de imposto
+        // if-else structure with two tax brackets
         if (salary <= 15000) {
-            tax = salary * 0.2;          // 20% para salários até 15 000
+            tax = salary * 0.2;          // 20% for salaries up to 15 000
             System.out.print("Pay 20% tax: " + tax);
         } else {
-            tax = salary * 0.3;          // 30% para salários acima de 15 000
+            tax = salary * 0.3;          // 30% for salaries above 15 000
             System.out.print("Pay 30% tax: " + tax);
         }
     }

@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 02 — Condicionais (if / switch)
-// Exercício: Ex14 — Ordenar três números por ordem crescente
-// Objetivo : Ler três inteiros e apresentá-los do menor ao maior
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 02 — Conditionals (if / switch)
+// Exercise : Ex14 — Sort three numbers in ascending order
+// Goal     : Read three integers and display them from smallest to largest
 // ============================================================
 
 package FichaPratica02;
@@ -13,8 +13,8 @@ public class Ex14 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F02 | EX14 ___________");
-        System.out.println("Tell me 3 numbers and I give you in sequence");
+        System.out.println("__________ FP02 | EX14 ___________");
+        System.out.println("Tell me 3 numbers and I give them back in ascending order");
 
         int a, b, c;
 
@@ -27,11 +27,11 @@ public class Ex14 {
         System.out.print("Enter third number: ");
         c = input.nextInt();
 
-        // Estratégia: primeiro identifica qual é o menor dos três
-        // depois dentro de cada bloco ordena os restantes dois entre si
+        // Strategy: first identify the smallest of the three
+        // then within each block sort the remaining two
 
         if (a < b && a < c) {
-            // 'a' é o menor — decidir a ordem de b e c
+            // 'a' is the smallest — decide the order of b and c
             if (b < c) {
                 System.out.println(a + " " + b + " " + c);
             } else {
@@ -40,7 +40,7 @@ public class Ex14 {
         }
 
         if (b < a && b < c) {
-            // 'b' é o menor — decidir a ordem de a e c
+            // 'b' is the smallest — decide the order of a and c
             if (a < c) {
                 System.out.println(b + " " + a + " " + c);
             } else {
@@ -49,7 +49,7 @@ public class Ex14 {
         }
 
         if (c < a && c < b) {
-            // 'c' é o menor — decidir a ordem de a e b
+            // 'c' is the smallest — decide the order of a and b
             if (a < b) {
                 System.out.println(c + " " + a + " " + b);
             } else {

@@ -1,8 +1,8 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 01 — Tipos de Dados e Input/Output
-// Exercício: Ex01 — Soma de dois números inteiros
-// Objetivo : Ler dois inteiros e apresentar a sua soma
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 01 — Data Types & Input/Output
+// Exercise : Ex01 — Sum of two integers
+// Goal     : Read two integers and display their sum
 // ============================================================
 
 package FichaPratica01;
@@ -12,27 +12,27 @@ import java.util.Scanner;
 public class Ex01 {
     public static void main(String[] args) {
 
-        // Scanner permite ler o que o utilizador escreve no teclado
+        // Scanner allows reading what the user types on the keyboard
         Scanner input = new Scanner(System.in);
 
-        // Declaração das variáveis: dois operandos e o resultado
-        int valor1, valor2, soma;
+        // Variable declarations: two operands and the result
+        int value1, value2, sum;
 
         System.out.println("___________ FP01 | EX01 ___________");
 
-        // Leitura do primeiro número
-        System.out.print("Insira um número: ");
-        valor1 = input.nextInt();
+        // Read the first number
+        System.out.print("Enter a number: ");
+        value1 = input.nextInt();
 
-        // Leitura do segundo número
-        System.out.print("Insira outro número: ");
-        valor2 = input.nextInt();
+        // Read the second number
+        System.out.print("Enter another number: ");
+        value2 = input.nextInt();
 
-        // Operação aritmética: adição
-        soma = valor1 + valor2;
+        // Arithmetic operation: addition
+        sum = value1 + value2;
 
-        // Apresentação do resultado
-        System.out.println("O resultado da soma é: " + soma);
+        // Display the result
+        System.out.println("The sum result is: " + sum);
 
     }
 }

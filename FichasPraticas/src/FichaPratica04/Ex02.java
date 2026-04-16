@@ -1,10 +1,10 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 04 — Ciclos do-while e Menus
-// Exercício: Ex02 — Menu CRUD com do-while
-// Objetivo : Apresentar um menu em loop (Criar / Atualizar /
-//            Eliminar / Sair) e executar a opção escolhida,
-//            repetindo até o utilizador escolher Sair (4)
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 04 — do-while Loops & Menus
+// Exercise : Ex02 — CRUD menu with do-while
+// Goal     : Display a menu in a loop (Create / Update /
+//            Delete / Exit) and execute the chosen option,
+//            repeating until the user selects Exit (4)
 // ============================================================
 
 package FichaPratica04;
@@ -14,58 +14,58 @@ import java.util.Scanner;
 public class Ex02 {
     public static void main(String[] args) {
 
-        // Scanner para leitura de dados do teclado
+        // Scanner for reading keyboard input
         Scanner input = new Scanner(System.in);
 
-        int opcao;
+        int option;
 
-        // do-while: o menu é apresentado sempre pelo menos uma vez
-        // e repete enquanto a opção não for 4 (Sair)
+        // do-while: the menu is always shown at least once
+        // and repeats while the option is not 4 (Exit)
         do {
 
-            // Apresentação do menu a cada iteração
+            // Display the menu at each iteration
             System.out.println("\n\n_____ MENU _____");
-            System.out.println("1. Criar");
-            System.out.println("2. Atualizar");
-            System.out.println("3. Eliminar");
-            System.out.println("4. Sair");
+            System.out.println("1. Create");
+            System.out.println("2. Update");
+            System.out.println("3. Delete");
+            System.out.println("4. Exit");
 
-            System.out.print("\nOpção: ");
-            opcao = input.nextInt();
+            System.out.print("\nOption: ");
+            option = input.nextInt();
 
-            // Executa a ação correspondente à opção escolhida
-            switch (opcao) {
+            // Execute the action matching the chosen option
+            switch (option) {
                 case 1:
-                    System.out.println("\n_____ CRIAR _____");
-                    // Leitura dos dados para criar um registo
-                    System.out.print("Insira o nome: ");
-                    String nome = input.next();
+                    System.out.println("\n_____ CREATE _____");
+                    // Read data to create a record
+                    System.out.print("Enter name: ");
+                    String name = input.next();
 
-                    System.out.print("Insira o codigo postal: ");
-                    String codPostal = input.next();
+                    System.out.print("Enter postal code: ");
+                    String postalCode = input.next();
                     break;
 
                 case 2:
-                    System.out.println("\n_____ ATUALIZAR _____");
-                    // Lógica de atualização (não implementada)
+                    System.out.println("\n_____ UPDATE _____");
+                    // Update logic (not implemented)
                     break;
 
                 case 3:
-                    System.out.println("\n_____ ELIMINAR _____");
-                    // Lógica de eliminação (não implementada)
+                    System.out.println("\n_____ DELETE _____");
+                    // Delete logic (not implemented)
                     break;
 
                 case 4:
-                    System.out.println("\nA encerrar o programa...");
-                    // A condição do while vai avaliar opcao == 4 → sai do ciclo
+                    System.out.println("\nClosing the program...");
+                    // The while condition will evaluate option == 4 → exits the loop
                     break;
 
                 default:
-                    System.out.println("Opção não reconhecida: " + opcao);
+                    System.out.println("Unrecognised option: " + option);
                     break;
             }
 
-        } while (opcao != 4); // repete enquanto a opção for diferente de Sair
+        } while (option != 4); // repeat while option is not Exit
 
     }
 }

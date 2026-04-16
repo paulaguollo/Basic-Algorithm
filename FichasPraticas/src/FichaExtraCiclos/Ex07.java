@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex07 — Contar positivos e negativos (sentinela 0)
-// Objetivo : Ler números até digitar 0 e contar quantos
-//            foram positivos e quantos foram negativos
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex07 — Count positives and negatives (sentinel 0)
+// Goal     : Read numbers until 0 is entered and count how many
+//            were positive and how many were negative
 // ============================================================
 
 package FichaExtraCiclos;
@@ -14,33 +14,33 @@ public class Ex07 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int num, negativo = 0, positivo = 0;
-        // negativo e positivo são contadores, inicializados a 0
+        int num, negativeCount = 0, positiveCount = 0;
+        // negativeCount and positiveCount are counters, initialised to 0
 
-        System.out.print("Digite um número: ");
+        System.out.print("Enter a number: ");
         num = input.nextInt();
 
-        // Ciclo com sentinela: termina quando o utilizador digita 0
+        // Sentinel loop: ends when the user enters 0
         while (num != 0) {
 
             if (num > 0) {
-                positivo++; // incrementa o contador de positivos
+                positiveCount++; // increment the positive counter
             }
             if (num < 0) {
-                negativo++; // incrementa o contador de negativos
+                negativeCount++; // increment the negative counter
             }
 
-            System.out.print("Digite um número: ");
+            System.out.print("Enter a number: ");
             num = input.nextInt();
         }
 
-        // Se ambos os contadores ficaram a 0, apenas foi introduzido o sentinela
-        if (negativo == 0 && positivo == 0) {
-            System.out.println("Nenhum número válido foi introduzido");
+        // If both counters are 0, only the sentinel was entered
+        if (negativeCount == 0 && positiveCount == 0) {
+            System.out.println("No valid number was entered");
         } else {
-            System.out.println("Você digitou 0 e o programa parou.");
-            System.out.println("Esta é a quantidade de digitos positivos: " + positivo);
-            System.out.println("Esta é a quantidade de digitos negativos: " + negativo);
+            System.out.println("You entered 0 and the program stopped.");
+            System.out.println("Number of positive values: " + positiveCount);
+            System.out.println("Number of negative values: " + negativeCount);
         }
     }
 }

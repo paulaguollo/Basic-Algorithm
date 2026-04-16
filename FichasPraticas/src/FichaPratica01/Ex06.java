@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 01 — Tipos de Dados e Input/Output
-// Exercício: Ex06 — Permuta de dois valores
-// Objetivo : Trocar os valores de duas variáveis sem usar
-//            uma variável auxiliar (através de aritmética)
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 01 — Data Types & Input/Output
+// Exercise : Ex06 — Swap two values
+// Goal     : Swap the values of two variables without using
+//            an auxiliary variable (using arithmetic)
 // ============================================================
 
 package FichaPratica01;
@@ -14,32 +14,32 @@ public class Ex06 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        System.out.println("__________ F01 | EX06 ___________");
-        System.out.println("insira dois valores inteiros");
+        System.out.println("__________ FP01 | EX06 ___________");
+        System.out.println("Enter two integer values");
 
-        // aux está declarado mas é usado apenas na versão comentada abaixo
-        int valor1, valor2, aux;
+        // aux is declared but only used in the commented version below
+        int value1, value2, aux;
 
-        System.out.print("O primeiro número é: ");
-        valor1 = input.nextInt();
-        System.out.print("O segundo número é: ");
-        valor2 = input.nextInt();
+        System.out.print("First number: ");
+        value1 = input.nextInt();
+        System.out.print("Second number: ");
+        value2 = input.nextInt();
 
-        // ── Versão clássica com variável auxiliar (comentada) ──────────
-        // aux    = valor1;   // guarda valor1 temporariamente
-        // valor1 = valor2;   // valor1 recebe valor2
-        // valor2 = aux;      // valor2 recebe o valor1 guardado
-        // ───────────────────────────────────────────────────────────────
+        // ── Classic version with auxiliary variable (commented out) ────────────
+        // aux    = value1;   // temporarily stores value1
+        // value1 = value2;   // value1 receives value2
+        // value2 = aux;      // value2 receives the stored value1
+        // ──────────────────────────────────────────────────────────────────────
 
-        // ── Versão sem variável auxiliar (usando aritmética) ───────────
-        // Passo 1: valor1 passa a ser a soma dos dois
-        valor1 = valor1 + valor2;
-        // Passo 2: subtraindo valor2 (que ainda é o original) obtemos o valor1 original
-        valor2 = valor1 - valor2;
-        // Passo 3: subtraindo o novo valor2 (= valor1 original) obtemos o valor2 original
-        valor1 = valor1 - valor2;
-        // ───────────────────────────────────────────────────────────────
+        // ── Version without auxiliary variable (using arithmetic) ──────────────
+        // Step 1: value1 becomes the sum of both
+        value1 = value1 + value2;
+        // Step 2: subtracting value2 (still original) gives back original value1
+        value2 = value1 - value2;
+        // Step 3: subtracting new value2 (= original value1) gives back original value2
+        value1 = value1 - value2;
+        // ──────────────────────────────────────────────────────────────────────
 
-        System.out.println("Esses sao os números permutados: " + valor1 + " | " + valor2);
+        System.out.println("Swapped values: " + value1 + " | " + value2);
     }
 }

@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 01 — Tipos de Dados e Input/Output
-// Exercício: Ex05 — Média aritmética e média ponderada
-// Objetivo : Calcular a média simples e ponderada (20%, 30%, 50%)
-//            de três notas introduzidas pelo utilizador
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 01 — Data Types & Input/Output
+// Exercise : Ex05 — Arithmetic mean and weighted average
+// Goal     : Calculate the simple and weighted average (20%, 30%, 50%)
+//            of three grades entered by the user
 // ============================================================
 
 package FichaPratica01;
@@ -13,43 +13,43 @@ import java.util.Scanner;
 public class Ex05 {
     public static void main(String[] args) {
 
-        // Scanner para leitura de dados do teclado
+        // Scanner for reading keyboard input
         Scanner input = new Scanner(System.in);
 
-        System.out.println("__________ F01 | EX05 ___________");
-        System.out.println("Insira as 3 notas para perceber a média aritmética e média ponderada");
+        System.out.println("__________ FP01 | EX05 ___________");
+        System.out.println("Enter 3 grades to see the arithmetic mean and weighted average");
 
-        // Variáveis para as notas e para os dois tipos de média
-        double nota1, nota2, nota3;
-        double mediaSimples, mediaPonderada;
-        // Pesos definidos: nota1=20%, nota2=30%, nota3=50%
+        // Variables for the grades and both types of average
+        double grade1, grade2, grade3;
+        double simpleMean, weightedMean;
+        // Weights defined: grade1=20%, grade2=30%, grade3=50%
 
-        // Leitura das três notas
-        System.out.print("Insira a primeira nota: ");
-        nota1 = input.nextDouble();
-        System.out.print("Insira a segunda nota: ");
-        nota2 = input.nextDouble();
-        System.out.print("Insira a terceira nota: ");
-        nota3 = input.nextDouble();
+        // Read the three grades
+        System.out.print("Enter the first grade: ");
+        grade1 = input.nextDouble();
+        System.out.print("Enter the second grade: ");
+        grade2 = input.nextDouble();
+        System.out.print("Enter the third grade: ");
+        grade3 = input.nextDouble();
 
-        // Média aritmética simples: soma das notas a dividir pelo número de notas
-        mediaSimples = (nota1 + nota2 + nota3) / 3;
-        System.out.println("A média Aritmética simples é: " + mediaSimples);
+        // Simple arithmetic mean: sum of grades divided by the number of grades
+        simpleMean = (grade1 + grade2 + grade3) / 3;
+        System.out.println("Simple arithmetic mean: " + simpleMean);
 
-        // Aplicação dos pesos a cada nota (as variáveis são reutilizadas)
-        nota1 = nota1 * 0.2;   // 20% de peso
-        nota2 = nota2 * 0.3;   // 30% de peso
-        nota3 = nota3 * 0.5;   // 50% de peso
-        double somaPeso = 1;   // 0.2 + 0.3 + 0.5 = 1.0 (soma dos pesos)
+        // Apply weights to each grade (variables are reused)
+        grade1 = grade1 * 0.2;   // 20% weight
+        grade2 = grade2 * 0.3;   // 30% weight
+        grade3 = grade3 * 0.5;   // 50% weight
+        double weightSum = 1;    // 0.2 + 0.3 + 0.5 = 1.0 (sum of weights)
 
-        // Apresentação das notas com ponderação aplicada
-        System.out.println("A primeira nota com ponderação de 20% é: " + nota1);
-        System.out.println("A segunda nota com ponderação de 30% é: "  + nota2);
-        System.out.println("A terceira nota com ponderação de 50% é: " + nota3);
+        // Display each grade with its weight applied
+        System.out.println("First grade with 20% weight: "  + grade1);
+        System.out.println("Second grade with 30% weight: " + grade2);
+        System.out.println("Third grade with 50% weight: "  + grade3);
 
-        // Média ponderada: soma das notas ponderadas a dividir pela soma dos pesos
-        // Como somaPeso=1, a divisão não altera o valor
-        mediaPonderada = (nota1 + nota2 + nota3) / somaPeso;
-        System.out.print("A média Ponderada é: " + mediaPonderada);
+        // Weighted mean: sum of weighted grades divided by sum of weights
+        // Since weightSum=1, the division does not change the value
+        weightedMean = (grade1 + grade2 + grade3) / weightSum;
+        System.out.print("Weighted mean: " + weightedMean);
     }
 }

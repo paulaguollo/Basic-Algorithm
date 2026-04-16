@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Prática 03 — Ciclos (while)
-// Exercício: Ex08 — 5 antecessores e 5 sucessores de um número
-// Objetivo : Ler um inteiro e imprimir os 5 números anteriores
-//            e os 5 números seguintes (sem incluir o próprio)
+// Module   : Algorithms & Programming
+// Sheet    : Practical Sheet 03 — Loops (while)
+// Exercise : Ex08 — 5 predecessors and 5 successors of a number
+// Goal     : Read an integer and print the 5 numbers before it
+//            and the 5 numbers after it (not including itself)
 // ============================================================
 
 package FichaPratica03;
@@ -13,31 +13,31 @@ import java.util.Scanner;
 public class Ex08 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("__________ F03 | EX08 ___________");
+        System.out.println("__________ FP03 | EX08 ___________");
         System.out.println("A program that reads an integer and prints the 5 previous and the 5 following.");
 
-        int num, ant, suc;
+        int num, prev, succ;
 
         System.out.print("Enter a number: ");
         num = input.nextInt();
 
-        // Calcular o início dos antecessores e o fim dos sucessores
-        ant = num - 5; // primeiro antecessor a imprimir
-        suc = num + 5; // último sucessor a imprimir
+        // Calculate the start of predecessors and the end of successors
+        prev = num - 5; // first predecessor to print
+        succ = num + 5; // last successor to print
 
-        // Ciclo dos antecessores: de (num-5) até (num-1)
-        while (ant < num) {
-            System.out.println(ant);
-            ant++; // avança em direção ao num
+        // Predecessors loop: from (num-5) to (num-1)
+        while (prev < num) {
+            System.out.println(prev);
+            prev++; // move towards num
         }
 
-        // Linha em branco para separar antecessores de sucessores
-        num++; // avança num para que ele próprio não apareça na lista de sucessores
+        // Blank line to separate predecessors from successors
+        num++; // advance num so it doesn't appear in the successor list
         System.out.println();
 
-        // Ciclo dos sucessores: de (num+1) até (num+5)
-        while (suc >= num) {
-            System.out.println(num); // imprime o valor atual de num (que já avançou)
+        // Successors loop: from (num+1) to (num+5)
+        while (succ >= num) {
+            System.out.println(num); // print the current value of num (already advanced)
             num++;
         }
     }

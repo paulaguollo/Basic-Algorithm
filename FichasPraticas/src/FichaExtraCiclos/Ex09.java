@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex09 — Soma dos dígitos de um número
-// Objetivo : Ler um inteiro e calcular a soma de todos os seus dígitos
-//            Exemplo: 1234 → 1 + 2 + 3 + 4 = 10
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex09 — Sum of digits of a number
+// Goal     : Read an integer and calculate the sum of all its digits
+//            Example: 1234 → 1 + 2 + 3 + 4 = 10
 // ============================================================
 
 package FichaExtraCiclos;
@@ -14,26 +14,26 @@ public class Ex09 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Declaração de variáveis
-        int numero, soma = 0, digito;
+        // Variable declarations
+        int number, sum = 0, digit;
 
-        System.out.print("Insira um número: ");
-        numero = input.nextInt();
+        System.out.print("Enter a number: ");
+        number = input.nextInt();
 
-        // A técnica usa aritmética modular para extrair dígito a dígito
-        // da direita para a esquerda
-        while (numero != 0) {
+        // The technique uses modular arithmetic to extract digit by digit
+        // from right to left
+        while (number != 0) {
 
-            // % 10 devolve sempre o último dígito (ex: 1234 % 10 = 4)
-            digito = numero % 10;
+            // % 10 always returns the last digit (e.g. 1234 % 10 = 4)
+            digit = number % 10;
 
-            // Acumula o dígito extraído na soma total
-            soma += digito; // equivale a soma = soma + digito
+            // Accumulate the extracted digit into the total sum
+            sum += digit; // equivalent to sum = sum + digit
 
-            // / 10 remove o último dígito (ex: 1234 / 10 = 123)
-            numero /= 10; // equivale a numero = numero / 10
+            // / 10 removes the last digit (e.g. 1234 / 10 = 123)
+            number /= 10; // equivalent to number = number / 10
         }
 
-        System.out.println("A soma dos dígitos é: " + soma);
+        System.out.println("The sum of digits is: " + sum);
     }
 }

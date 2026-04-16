@@ -1,9 +1,9 @@
 // ============================================================
-// Módulo   : Algoritmia e Programação
-// Ficha    : Ficha Extra — Ciclos
-// Exercício: Ex10 — Inverter os dígitos de um número
-// Objetivo : Ler um inteiro e apresentar os seus dígitos invertidos
-//            Exemplo: 1234 → 4321
+// Module   : Algorithms & Programming
+// Sheet    : Extra Sheet — Loops
+// Exercise : Ex10 — Reverse the digits of a number
+// Goal     : Read an integer and display its digits reversed
+//            Example: 1234 → 4321
 // ============================================================
 
 package FichaExtraCiclos;
@@ -14,28 +14,28 @@ public class Ex10 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Declaração de variáveis
-        int numero, numeroInvertido = 0, digito = 0;
+        // Variable declarations
+        int number, reversedNumber = 0, digit = 0;
 
-        System.out.print("Insira um número: ");
-        numero = input.nextInt();
+        System.out.print("Enter a number: ");
+        number = input.nextInt();
 
-        // Usa a mesma técnica de extração dígito a dígito do Ex09,
-        // mas em vez de somar, constrói o número invertido
-        while (numero != 0) {
+        // Uses the same digit-by-digit extraction technique as Ex09,
+        // but instead of summing, builds the reversed number
+        while (number != 0) {
 
-            // Extrai o último dígito do número
-            digito = numero % 10;
+            // Extract the last digit of the number
+            digit = number % 10;
 
-            // Desloca os dígitos já recolhidos uma casa para a esquerda
-            // e acrescenta o novo dígito na posição das unidades
+            // Shift already collected digits one place to the left
+            // and append the new digit in the units position
             // Ex: 43 → 43*10 + 2 = 432
-            numeroInvertido = numeroInvertido * 10 + digito;
+            reversedNumber = reversedNumber * 10 + digit;
 
-            // Remove o último dígito do número original
-            numero /= 10;
+            // Remove the last digit from the original number
+            number /= 10;
         }
 
-        System.out.println("Resultado: " + numeroInvertido);
+        System.out.println("Result: " + reversedNumber);
     }
 }
