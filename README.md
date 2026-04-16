@@ -1,6 +1,6 @@
-# Algoritmia & Programação 
+# Basic-Algorithm
 
-Hands-on exercises from the **Algorithms & Programming** module building a solid foundation in algorithmic thinking and translating logic into clean, working code.
+Hands-on exercises from the **Algorithms & Programming** basic module building a solid foundation in algorithmic thinking and translating logic into clean, working code.
 
 ---
 
@@ -63,7 +63,7 @@ Open in **IntelliJ IDEA** — the project config is already included.
 
 ```bash
 # Clone the repo
-git clone https://github.com/paulaguollo/algoritmia.git
+git clone https://github.com/paulaguollo/Basic-Algorithm.git
 ```
 
 Then: `File → Open` → select the `Algoritmia` folder → run any `ExXX.java` directly.
